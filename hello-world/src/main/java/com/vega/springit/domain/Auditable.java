@@ -16,13 +16,13 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public abstract class Auditable {
 	@CreatedBy
 	private String createdBy;
-	
+
 	@CreatedDate
 	private LocalDateTime creationDate;
-	
+
 	@LastModifiedBy
 	private String lastModifiedBy;
-	
+
 	@LastModifiedDate
 	private LocalDateTime lastModifiedDate;
 
@@ -57,7 +57,5 @@ public abstract class Auditable {
 	public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
 		this.lastModifiedDate = lastModifiedDate;
 	}
-	
-	
-	
+
 }
