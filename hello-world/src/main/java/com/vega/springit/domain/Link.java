@@ -27,7 +27,8 @@ import lombok.ToString;
 
 @Entity
 @RequiredArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 @ToString
 @NoArgsConstructor
 public class Link extends Auditable {
@@ -35,11 +36,11 @@ public class Link extends Auditable {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	@NonNull
 	@NotEmpty(message = "Please enter title")
 	private String title;
-	
+
 	@NonNull
 	@NotEmpty(message = "Please enter URL")
 	@URL(message = "Please enter valid URL")

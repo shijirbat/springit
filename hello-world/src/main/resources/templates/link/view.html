@@ -41,7 +41,7 @@
 						th:datetime="${link.getCreationDate()}" th:text="${link.getPrettyTime()}" class="live-timestamp">2
 						hours ago</time>
 					by <a href="/"
-						class="author">therealdanvega</a> <span class="userattrs"></span>
+						class="author" th:text="${link.createdBy}">therealdanvega</a> <span class="userattrs"></span>
 				</p>
 				<p>
 					<a href="/" class="comments" th:text="|${link.getComments().size()} comments|"><i class="fas fa-comments"></i> 8

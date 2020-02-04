@@ -13,6 +13,5 @@ public class SpringitProperties {
 	public void setWelcomeMsg(String welcomeMsg) {
 		this.welcomeMsg = welcomeMsg;
 	}
-	
 
 }
