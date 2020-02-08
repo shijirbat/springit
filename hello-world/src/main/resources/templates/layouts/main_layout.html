@@ -27,7 +27,7 @@
 		th:fragment="navigation">
 		<div class="container">
 			<a class="navbar-brand" href="/"> <i class="fa fa-leaf"
-				aria-hidden="true"></i> SPRINGIT
+				aria-hidden="true"></i> Library
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
@@ -39,21 +39,24 @@
 					<li class="nav-item active"><a class="nav-link" href="/">
 							<i class="fas fa-home" aria-hidden="true"></i> Home
 					</a></li>
+					<li class="nav-item active"><a class="nav-link" th:href="@{/link}">
+							<i class="fas fa-home" aria-hidden="true"></i> Links
+					</a></li>
 
 					<!-- if user is signed in -->
 					<li class="nav-item" sec:authorize="isAuthenticated()"><a
 						class="nav-link" th:href="@{/link/submit}"> <i
-							class="fa fa-link" aria-hidden="true"></i> Submit Link
+							class="fa fa-link" aria-hidden="true"></i> Link нэмэх
 					</a></li>
 					<li class="nav-item" sec:authorize="isAuthenticated()"><a
 						class="nav-link" th:href="@{/profile}"> <i class="fa fa-user"
-							aria-hidden="true"></i> Account
+							aria-hidden="true"></i> Бүртгэл
 					</a></li>
 					<li class="nav-item">
 						<form method="POST" th:action="@{/logout}"
 							sec:authorize="isAuthenticated()">
 							<button class="nav-link">
-								<i class="fa fa-sign-out-alt" aria-hidden="true"></i> Sign Out
+								<i class="fa fa-sign-out-alt" aria-hidden="true"></i> Гарах
 							</button>
 						</form>
 					</li>
@@ -61,11 +64,11 @@
 					<!-- if user is not signed in -->
 					<li class="nav-item" sec:authorize="!isAuthenticated()"><a
 						class="nav-link" th:href="@{/login}"> <i
-							class="fa fa-sign-in-alt" aria-hidden="true"></i> Sign In
+							class="fa fa-sign-in-alt" aria-hidden="true"></i> Нэвтрэх
 					</a></li>
 					<li class="nav-item" sec:authorize="!isAuthenticated()"><a
 						class="nav-link" th:href="@{/register}"> <i
-							class="fa fa-user-plus" aria-hidden="true"></i> Register
+							class="fa fa-user-plus" aria-hidden="true"></i> Бүртгүүлэх
 					</a></li>
 				</ul>
 			</div>
@@ -74,12 +77,9 @@
 
 	<div class="jumbotron jumbotron-fluid" th:fragment="jumbotron">
 		<div class="container" align="center">
-			<h2 class="display-4">Spring Boot Reddit Clone</h2>
+			<h2 class="display-4">Номын сангийн программ хийдэг юм билүү</h2>
 			<p class="lead">
-				This is a reddit clone built using <a href="#">Spring Boot 2</a>, <a
-					href="#"></a>Spring Framework 5</a> & so many other great projects! If
-				you would like to learn how to build this application you can check
-				out my course, <a href="#">Getting Started with Spring Boot 2</a>.
+				ном уншихаар авсан бол заавал буцааж өг</a>.
 			</p>
 			<a href="http://www.github.com/cfaddict/springit"
 				class="btn btn-success" target="_blank"><i class="fab fa-github"></i>

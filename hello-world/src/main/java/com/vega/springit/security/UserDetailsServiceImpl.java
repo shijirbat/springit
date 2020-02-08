@@ -12,9 +12,9 @@ import com.vega.springit.repository.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
-	
+
 	private UserRepository userRepository;
-	
+
 	public UserDetailsServiceImpl(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
@@ -22,12 +22,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		Optional<User> user = userRepository.findByEmail(email);
-		if(!user.isPresent()) {
+		if (!user.isPresent()) {
 			throw new UsernameNotFoundException(email);
 		}
 		return user.get();
 	}
-	
-	
 
 }
